@@ -1,0 +1,158 @@
+#include <iostream>
+using namespace std;
+
+//// Task 1:
+//
+//
+//class Fraction {
+//private:
+//	int numerator; // suret
+//	int denominator; // mexrec
+//public:
+//	void init(int num, int don);
+//	Fraction Multiply(const Fraction& other); // Kesri kesre vurub yeni kesr qaytarir
+//	Fraction Add(const Fraction& other); // Kesri kesrle toplayib yeni kesr qaytarir
+//	Fraction Minus(const Fraction& other); // Kesri kesrden chixib yeni kesr qaytarir
+//	Fraction Divide(const Fraction& other); // Kesri kesre bolub yeni kesr qaytarir
+//	void Simplify(const Fraction& other); // Kesri ixtisar edir
+//};
+//
+//
+//void main() {
+//
+//	Fraction f1;
+//	f1.init(4, 7);
+//	Fraction f2;
+//	f2.init(4, 7);
+//	Fraction result = f1.Multiply(f12);
+//
+//}
+
+
+
+class Fraction 
+{
+private:
+
+	int numerator; // suret
+	int denominator; // mexrec
+
+public:
+
+	Fraction() : numerator(1), denominator(1) {}
+
+	void init(int num, int don)
+	{
+		numerator = num;
+		denominator = don > 0 ? don : 1;
+	}
+	Fraction Multiply(const Fraction& other) // Kesri kesre vurub yeni kesr qaytarir
+	{
+		Fraction answer;
+		numerator = numerator * other.numerator;
+		denominator = denominator * other.denominator;
+		answer.init(numerator, denominator);
+		return answer;
+	}
+
+	Fraction Add(const Fraction& other) // Kesri kesrle toplayib yeni kesr qaytarir
+	{
+		Fraction answer;
+		numerator = numerator * other.denominator + other.numerator * denominator;
+		denominator = denominator * other.denominator;
+		answer.init(numerator, denominator);
+		return answer;
+	}
+
+	Fraction Minus(const Fraction& other) // Kesri kesrden chixib yeni kesr qaytarir
+	{
+		Fraction answer;
+		numerator = numerator * other.denominator - other.numerator * denominator;
+		denominator = denominator * other.denominator;
+		answer.init(numerator, denominator);
+		return answer;
+	}
+
+	Fraction Divide(const Fraction& other) // Kesri kesre bolub yeni kesr qaytarir
+	{
+		Fraction answer;
+		numerator = numerator * other.denominator;
+		denominator = denominator * other.denominator;
+		answer.init(numerator, denominator);
+		return answer;
+	}
+
+
+
+	void Simplify(Fraction& other) //Kesri ixtisar edir
+	{
+		int d;
+		int temp;
+		int a = other.numerator;
+		int b = other.denominator;
+		if (a > b)
+		{
+			temp = a;
+			a = b;
+			b = temp;
+		}
+		while ((d = a % b) != 0)
+		{
+			a = b;
+			b = d;
+		}
+		other.numerator /= b;
+		other.denominator /= b;
+	}
+};
+
+
+//// Task 2:
+//Point class yazilsin
+//x, y fieldleri olsun ve her bir field uchun getter setterler yazilsin.
+//constructor parametric, default
+//Print method - u yazilsin
+
+class Point 
+{
+private:
+
+	int x;
+	int y;
+
+public:
+	Point() { x = 0; y = 0; }
+
+	Point(int sX, int sY) 
+	{
+		SetX(sX);
+		SetY(sY);
+	}
+
+	int GetX() { return x; }
+	int GetY() { return y; }
+
+	void SetX(int setX) { x = setX; }
+	void SetY(int setY) { y = setY; }
+
+
+
+	void Print() {
+		cout << "X: " << x << endl;
+		cout << "Y: " << y << endl;
+	}
+};
+
+int main()
+{
+	Fraction f1;
+	f1.init(4, 7);
+	Fraction f2;
+	f2.init(4, 7);
+	Fraction result = f1.Multiply(f2);
+
+	Point XY(6, 9);
+	XY.Print();
+	
+}
+

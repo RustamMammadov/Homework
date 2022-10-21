@@ -1,0 +1,175 @@
+#include <iostream>
+using namespace std;
+
+// Kechilenlerin her biri istifade olunsun
+// Initializer list, Delegate, getter setter
+
+//class : Product
+//	fields : id, name, description, price, discount
+//	methods : ShowProduct(), GetPriceWithDiscount()
+//
+//
+//	Stock{
+//	   char* name
+//	   Product *	// array
+//	   Print()	// show all product in Stock
+//	   Product GetProduct(int id);
+//}
+
+
+class Product
+{
+
+private:
+	static int id;
+	char* name;
+	char* description;
+	float price;
+	int discount;
+
+public:
+
+#pragma region Constructor
+
+	Product() :name(nullptr), description(nullptr), price(0), discount(0)
+	{
+		id++;
+	}
+
+	Product(const char* setName, const char* setDescription, float setPrice, int setDiscount)
+	{
+		id++;
+		SetName(setName);
+		SetDescription(setDescription);
+		SetPrice(setPrice);
+		SetDiscount(setDiscount);
+	}
+
+#pragma endregion
+
+#pragma region Getter
+
+	int GetId() { return id; }
+	const char* GetName() { return name; }
+	const char* GetDescription() { return description; }
+	float GetPrice() { return price; }
+	int GetDiscount() { return discount; }
+
+#pragma endregion
+
+
+#pragma region Setter
+
+	void SetId(int setId)
+	{
+		id = setId < 0 ? 1 : setId;
+	}
+
+	void SetName(const char* setName)
+	{
+		name = new char[strlen(setName) + 1];
+		strcpy_s(name, strlen(setName) + 1, setName);
+	};
+
+
+	void SetDescription(const char* setDescription)
+	{
+
+		description = new char[strlen(setDescription) + 1];
+		strcpy_s(description, strlen(setDescription) + 1, setDescription);
+	};
+
+
+
+	void SetPrice(float setPrice)
+	{
+		price = setPrice < 0 ? 0 : setPrice;
+	};
+
+	void SetDiscount(int setDiscount)
+	{
+		discount = setDiscount < 0 ? 0 : setDiscount;
+	};
+
+#pragma endregion
+
+#pragma region Methods
+
+	float GetPriceWithDiscount()
+	{
+		return price - (price * discount / 100);
+	}
+
+	void ShowProduct() {
+		cout << "Id : " << id << endl;
+		if (name == nullptr)
+			cout << "Name : " << "NO Name" << endl;
+		else
+			cout << "Name : " << name << endl;
+		if (name == nullptr)
+			cout << "Description : " << "NO Description" << endl;
+		else
+			cout << "Description : " << description << endl;
+		cout << "Price : " << price << endl;
+		cout << "Discount : " << discount << endl;
+		cout << "Get price with discount : " << GetPriceWithDiscount() << endl << endl;
+	}
+
+#pragma endregion
+	~Product()
+	{
+		delete[] name;
+		delete[] description;
+	}
+};
+
+int Product::id = 0;
+
+
+class Stock
+{
+	const char* name;
+	int count = 3;
+	Product* products = new Product[count]
+	{
+		{"Cucumber", "Green", 2, 5},
+		{"Pineapple", "Green", 6, 3},
+		{"Meat", "Red", 14, 5}
+	};
+
+public:
+	Stock() : name(nullptr) {}
+
+
+	void Print() {
+		for (int i = 0; i < count; i++)
+		{
+			products[i].ShowProduct();
+		}
+	}
+	Product GetProduct(int id) {
+		for (int i = 0; i < count; i++)
+		{
+			if (products[id].GetId() == id)
+				return products[i];
+		}
+	}
+
+};
+
+
+
+
+int main()
+{
+	Product ss1;
+	ss1.ShowProduct();
+	Product ss2("Cucumber", "Green", 2, 5);
+	ss2.ShowProduct();
+	Product ss3("Pineapple", "Green", 6, 3);
+	ss3.ShowProduct();
+	Stock products;
+	products.Print();
+}
+
+
