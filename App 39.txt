@@ -1,0 +1,312 @@
+#include <iostream>
+using namespace std;
+
+//class : Debtor(debtor - borclu)
+//	fields : objectId, name, surname, workAddress, salary, phoneNumber
+//	fields : hasLatePayment(bool), liveAddress, debt, Id(static)
+//	methods : showDebtor
+//
+//
+//	class : Bank
+//	fields : name, debtors(array)
+//	method : showAllDebtors,
+//	method : borcu 1000 den yuxari olanlari gostermek
+//	method : gecikmesi olanlari gostermek
+//
+//
+//	QEYD : Kechdiymiz her shey istifade olunsun.
+//	static field, copy constructor ve s
+
+class Debtor
+{
+private: 
+#pragma region Fields
+	int objectId;
+	char* name;
+	char* surname;
+	char* workAddress;
+	int salary;
+	int phoneNumber;
+	bool hasLatePayment;
+	char* liveAddress;
+	int debt;
+
+public:
+	static int id;
+#pragma endregion
+
+#pragma region Getter
+
+	int GetObjectId() const { return objectId; }
+
+	int GetId() const { return id; }
+
+	const char* GetName() const{ return name; }
+
+	const char* GetSurname() const { return surname; }
+
+	const char* GetWorkAddress() const { return workAddress; }
+
+	int GetSalary() const { return salary; }
+
+	int GetPhoneNumber() const { return phoneNumber; }
+
+	bool GetHasLatePayment() const { return hasLatePayment; }
+
+	const char* GetLiveAddress() const { return liveAddress; }
+
+	int GetDebt() const  { return debt; }
+
+#pragma endregion
+
+#pragma region Setter
+	void SetObjectId()
+	{
+		objectId = ++id;
+	}
+
+	void SetName(const char* name)
+	{
+		//delete this->name;
+		this->name = new char[strlen(name) + 1];
+		strcpy_s(this->name, strlen(name) + 1, name);
+	}
+
+	void SetSurname(const char* surname)
+	{
+		//delete this->surname;
+		this->surname = new char[strlen(surname) + 1];
+		strcpy_s(this->surname, strlen(surname) + 1, surname);
+	}
+
+	void SetWorkAddressname(const char* workAddress)
+	{
+		//delete this->workAddress;
+		this->workAddress = new char[strlen(workAddress) + 1];
+		strcpy_s(this->workAddress, strlen(workAddress) + 1, workAddress);
+	}
+
+	void SetSalary(int salary)
+	{
+		this->salary = salary < 0 ? 0 : salary;
+	}
+
+	void SetPhoneNumber(int phoneNumber)
+	{
+		this->phoneNumber = phoneNumber > 999999999 ? 000000000 : phoneNumber;
+	}
+
+	void SetHasLatePayment(bool hasLatePayment)
+	{
+		this->hasLatePayment = hasLatePayment;
+	}
+
+	void SetLiveAddress(const char* liveAddress)
+	{
+		//delete this->liveAddress;
+		this->liveAddress = new char[strlen(liveAddress) + 1];
+		strcpy_s(this->liveAddress, strlen(liveAddress) + 1, liveAddress);
+	}
+
+	void SetDebt(int debt)
+	{
+		this->debt = debt < 0 ? 0 : debt;
+	}
+
+
+#pragma endregion
+
+#pragma region Constructor
+
+	Debtor() : salary(0), phoneNumber(0), hasLatePayment(true), debt(0), objectId(0), name(nullptr), surname(nullptr), workAddress(nullptr), liveAddress(nullptr) {}
+
+	Debtor(const char* name, const char* surname, const char* workAddress, int salary, int phoneNumber, bool hasLatePayment, const char* liveAddress, int debt)
+	{
+		SetObjectId();
+		SetName(name);
+		SetSurname(surname);
+		SetWorkAddressname(workAddress);
+		SetSalary(salary);
+		SetPhoneNumber(phoneNumber);
+		SetHasLatePayment(hasLatePayment);
+		SetLiveAddress(liveAddress);
+		SetDebt(debt);
+	}
+
+	Debtor(const Debtor& other)
+	{
+		objectId = other.objectId;
+		SetName(other.name);
+		SetSurname(other.surname);
+		SetWorkAddressname(other.workAddress);
+		SetSalary(other.salary);
+		SetPhoneNumber(other.phoneNumber);
+		SetHasLatePayment(other.hasLatePayment);
+		SetLiveAddress(other.liveAddress);
+		SetDebt(other.debt);
+	}
+
+#pragma endregion
+
+#pragma region Method
+
+
+
+	void ShowDebtor()
+	{
+		cout << "\nObjectId       :  " << objectId;
+		cout << "\nName           :  " << name;
+		cout << "\nSurname        :  " << surname;
+		cout << "\nWorkAddress    :  " << workAddress;
+		cout << "\nSalary         :  " << salary;
+		cout << "\nPhoneNumber    :  " << phoneNumber;
+		cout << "\nHasLatePayment :  " << boolalpha << hasLatePayment;
+		cout << "\nLiveAddress    :  " << liveAddress;
+		cout << "\nDebt           :  " << debt << endl << endl;
+
+	}
+
+	Debtor& operator=(const Debtor& other)
+	{
+		objectId = other.objectId;
+		SetName(other.name);
+		SetSurname(other.surname);
+		SetWorkAddressname(other.workAddress);
+		SetSalary(other.salary);
+		SetPhoneNumber(other.phoneNumber);
+		SetHasLatePayment(other.hasLatePayment);
+		SetLiveAddress(other.liveAddress);
+		SetDebt(other.debt);
+		return *this;
+	}
+
+#pragma endregion
+
+#pragma region Desturctor
+	~Debtor()
+	{
+		delete[] name;
+		delete[] surname;
+		delete[] workAddress;
+		delete[] liveAddress;
+	}
+#pragma endregion
+
+};
+
+int Debtor::id = 0;
+
+class Bank
+{
+private:
+	Debtor* debtors;
+	char* name;
+	int size = 0;
+
+public:
+
+	Debtor* GetDebtors() const { return debtors; }
+	const char* GetName() const { return name; }
+
+	void SetName(const char* name)
+	{
+		this->name = new char[strlen(name) + 1];
+		strcpy_s(this->name, strlen(name) + 1, name);
+	}
+
+	Bank()
+	{
+		debtors = nullptr;
+		SetName("NoName");
+	}
+
+#pragma region Method
+
+	void AddDebtor(Debtor user)
+	{
+		Debtor* temp = new Debtor[size + 1];
+		for (int i = 0; i < size; i++)
+		{
+
+			temp[i] = debtors[i];
+		}
+		temp[size++] = user;
+
+		delete[] debtors;
+		debtors = temp;
+		temp = nullptr;
+	}
+
+	void ShowDebtors()
+	{
+		for (int i = 0; i < size; i++)
+		{
+			debtors[i].ShowDebtor();
+			cout << "\n\n";
+
+		}
+
+	}
+
+	void DebtOver1000()
+	{
+		for (int i = 0; i < size; i++)
+		{
+			if (debtors[i].GetDebt() > 1000)
+			{
+				debtors[i].ShowDebtor();
+				cout << "\n\n";
+			}
+		}
+	}
+	
+	void HasLatePayment()
+	{
+		for (int i = 0; i < size; i++)
+		{
+			if (debtors[i].GetHasLatePayment() == true)
+			{
+				debtors[i].ShowDebtor();
+				cout << "\n\n";
+			}
+		}
+	}
+#pragma endregion
+
+	~Bank()
+	{
+		delete[] debtors;
+		delete[] name;
+	}
+};
+
+
+
+
+
+int main()
+{
+	Debtor user1("Rustam", "Mammadov", "Baku", 500, 703069333, false, "Baku", 10000);
+	user1.ShowDebtor();
+	Debtor user2("Huseyn", "Mammadov", "Naxchivan", 1000, 555555555, true, "Baku", 120);
+	user2.ShowDebtor();
+	Debtor user3("Islam", "Salamzade", "Sheki", 550, 555555555, true, "Baku", 1100);
+	user3.ShowDebtor();
+
+	cout << "\nABB Users\n";
+
+	Bank ABB;
+	ABB.AddDebtor(user1);
+	ABB.AddDebtor(user2);
+	ABB.AddDebtor(user3);
+	ABB.ShowDebtors();
+
+	cout << "\nABB Debt Over 1000\n";
+
+	ABB.DebtOver1000();
+
+	cout << "\nABB Has Late Payment\n";
+
+	ABB.HasLatePayment();
+}
+
