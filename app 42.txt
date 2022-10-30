@@ -1,0 +1,228 @@
+#include <iostream>
+
+using namespace std;
+
+//MyString
+//1)1 ci xarakter qaytaran method
+//2)sonuncu xarakter qaytaran method 
+//3) Append(const char* text)  
+//4) s.rfind('a') 
+//5)s.find('w')//6 xarakterin indexi qayitsin
+//6)s.clear()//string silinsin delete edin
+
+/*
+1. IntArray class-i yaradin. Bu class massiv rolunu
+oynamalidir.
+Novbeti imkanlar olsun:
+- Massivin evveline reqem elave eden method
+- Massivin sonuna reqem elave eden method
+- Massivi copy etmek imkani yaradin
+- Print
+*/
+
+class MyString
+{
+private:
+
+	char* String = nullptr;
+	int size = 0;
+
+public:
+
+	MyString() = default;
+
+	MyString(const char*& Str)
+	{
+		String = StrCopy(Str);
+	}
+
+	MyString(const MyString& other)
+	{
+		size = StrLen(other.String);
+		String = new char[size];
+
+		for (int i = 0; i < size; i++)
+		{
+			String[i] = other.String[i];
+
+		}
+		String[size] = '\0';
+	}
+
+	const char* GetString() const
+	{
+		return String;
+	}
+
+	int StrLen(const char* Str)
+	{
+		int size = 0;
+		for (int i = 0; Str[i] != '\0'; i++)
+		{
+			size++;
+		}
+		return ++size;
+	}
+
+	char* StrCopy(const char* Str)
+	{
+		size = StrLen(Str);
+		String = new char[size];
+
+		for (int i = 0; i < size; i++)
+		{
+			String[i] = Str[i];
+
+		}
+		String[size] = '\0';
+		return String;
+	}
+
+	char FirstEl() const
+	{
+		return String[0];
+	}
+
+	char LastEl()
+	{
+		return String[StrLen(String) - 1];
+	}
+
+	void Append(const char* s) {
+		if (String != nullptr)
+		{
+			int size = StrLen(String) - 1;
+			int sizeS = StrLen(s) - 1;
+			char* temp = new char[size + sizeS + 1];
+			for (int i = 0; i < size; i++)
+			{
+				temp[i] = String[i];
+			}
+
+			for (int i = size, j = 0; i < size + sizeS; i++, j++)
+			{
+				temp[i] = s[j];
+			}
+			temp[size + sizeS] = '\0';
+			String = StrCopy(temp);
+			temp = nullptr;
+		}
+		else {
+			String = StrCopy(s);
+		}
+	}
+
+	int rFind(const char s) {
+		int size = StrLen(String) - 1;
+		for (int i = size, j = 0; i >= 0; i--, j++)
+		{
+			if (s == String[i]) {
+				return j;
+			}
+		}
+	}
+
+	int Find(const char s) {
+		int size = StrLen(String) - 1;
+		for (int i = 0; i <= size; i++)
+		{
+			if (s == String[i]) {
+				return i;
+			}
+		}
+	}
+
+	void Clear() {
+		delete[] String;
+	}
+};
+
+class IntArray {
+public:
+	int* arr;
+	int size;
+
+	IntArray() {
+		arr = nullptr;
+		size = 0;
+	}
+
+	void AddElement(int elem) {
+		int* temp = new int[size + 1];
+		for (int i = 0; i < size; i++) {
+			temp[i] = arr[i];
+		}
+		temp[size] = elem;
+		delete[] arr;
+		arr = temp;
+		temp = nullptr;
+		size++;
+	}
+
+	void AddElementBefore(int elem) {
+		int* temp = new int[size + 1];
+		temp[0] = elem;
+		for (int i = 0; i < size; i++) {
+			temp[i + 1] = arr[i];
+		}
+		delete[] arr;
+		arr = temp;
+		temp = nullptr;
+		size++;
+	}
+
+	void Copy(IntArray& other) {
+		delete[] arr;
+		size = other.size;
+		arr = new int[size] {};
+		for (int i = 0; i < size; i++) {
+			arr[i] = other.arr[i];
+		}
+	}
+
+	void print() {
+		for (int i = 0; i < size; i++) {
+			cout << arr[i] << " ";
+		}
+		cout << endl;
+	}
+
+	~IntArray()
+	{
+		delete[] arr;
+	}
+};
+
+
+
+
+int main()
+{
+	MyString s;
+	s.Append("Rustam ");
+	cout << s.GetString() << endl;
+	s.Append("Mammadov");
+	cout << s.GetString() << endl;
+
+
+	IntArray arr;
+	arr.AddElement(1);
+	arr.AddElement(13);
+	arr.AddElement(3);
+	arr.AddElement(5);
+	arr.AddElement(4);
+	arr.AddElement(6);
+	arr.AddElementBefore(21);
+	arr.AddElement(9);
+	arr.AddElement(7);
+
+	arr.print();
+	cout << endl << endl;
+
+
+	IntArray arrC;
+	arrC.Copy(arr);
+	arrC.print();
+
+
+}
