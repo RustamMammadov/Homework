@@ -1,0 +1,141 @@
+#include <iostream>
+#include <assert.h>
+#include <queue>
+
+
+// Priority Queue template
+// class Student olmalidir.
+// Ortalamasi en yuxari olan telebe novbeden chixir.
+
+// Likendlist arashdirin.
+
+using namespace std;
+
+
+template<class T>
+
+class PriorityQueue
+{
+	T* arr;
+	int capacity;
+	int count;
+	int rear;
+
+	int GetMaxIndex() {
+		int maxIndex = 0;
+		for (int i = 0; i < count; i++) {
+			if (arr[i] > arr[maxIndex])
+				maxIndex = i;
+		}
+		return maxIndex;
+	}
+
+public:
+
+	PriorityQueue(int size) 
+	{
+		arr = new T[size];
+		capacity = size;
+		count = 0;
+		rear = -1;
+	}
+
+	bool IsFull() const { return capacity == count; }
+
+	bool IsEmpty() const { return 0 == count; }
+
+	void Push(T value) {
+		assert(!IsFull());
+		arr[++rear] = value;
+		count++;
+	}
+
+	void Pop() {
+		assert(!IsEmpty());
+		int index = GetMaxIndex();
+		for (int i = index; i < count - 1; i++) {
+			arr[i] = arr[i + 1];
+		}
+		count--;
+	}
+
+	void Print() {
+		for (int i = 0; i < count; i++) {
+			cout << arr[i] << " ";
+		}
+		cout << endl;
+	}
+
+	~PriorityQueue()
+	{
+		delete[] arr;
+	}
+};
+
+
+
+class Student
+{
+private:
+	string name;
+	float average;
+
+
+public:
+
+	Student()
+	{
+		name = "NoName";
+		average = 0;
+	}
+
+	Student(string name, float average)
+	{
+		this->name = name;
+		this->average = average;
+	}
+
+	Student& operator=(const Student& other)
+	{
+		this->name = other.name;
+		this->average = other.average;
+		return *this;
+	}
+
+	bool operator>(const Student& other)
+	{
+		return average > other.average;
+	}
+
+	bool operator<(const Student& other)
+	{
+		return average < other.average;
+	}
+
+	friend ostream& operator<<(ostream& out, const Student& obj) {
+		out << "\nName: " << obj.name
+			<< "\nAverage: " << obj.average
+			<< endl;
+		return out;
+	}
+};
+
+
+
+
+int main()
+{
+	PriorityQueue<Student> pq(4);
+	pq.Push(Student("Namiq", 71));
+	pq.Push(Student("Behruz", 99));
+	pq.Push(Student("Islam ", 96));
+
+	pq.Print();
+	cout << "\n\n";
+	pq.Pop();
+	pq.Print();
+	cout << "\n\n";
+	pq.Pop();
+	pq.Print();
+}
+
