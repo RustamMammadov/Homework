@@ -26,6 +26,7 @@ using namespace std;
 //	f2.init(4, 7);
 //	Fraction result = f1.Multiply(f12);
 //
+//
 //}
 
 
