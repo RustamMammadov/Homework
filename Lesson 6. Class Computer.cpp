@@ -3,7 +3,7 @@
 
 using namespace std;
 
-//
+
 //class: Computer
 //fields:
 //id(static)
