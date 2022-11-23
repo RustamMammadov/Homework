@@ -1,0 +1,13 @@
+Binary Search Tree haqqinda arashdirma edin.
+
+
+Binary Search Tree - İkili axtarış ağacı , Məlumatların çeşidlənmiş siyahısını saxlamağa imkan verən məlumat strukturudur.
+ikili axtariş ağacı, düyünlərdə olan melumatlarin bir-birindən böyüklük və ya kiçiklik münasibətinə əsaslanır.
+Hər düyünün solundakı bütün məlumatlar, düyünün dəyərindən kiçik, sağındakı bütün məlumatlar düyünün dəyərindən böyük olmalıdır.
+Binary Search Tree-də əlavə etmək, çixarmaq ve ya silmək olar, amma hər əməliyatdan sonra sistemin qruluşu pozulmamalıdır.
+
+Bu sistemdə axtariş aparmaq üçün ağacın kök dəyərinə baxaraq :
+Axtarılan məlumat kökdəki məlumata bərabərdisə , melumat tapılmışdır.
+Axtarılan məlumat kökdəki məlumatdan kiçikdirsə, kökün sol qolunda eyni məntiqlə axtarişa davam etmək lazımdır.
+Axtarilan məlumat kökdəki məlumatdan böyükdürsə, kökün sağ qolunda eyni məntiqlə axtarişa davam etmək lazımdır.
+Çünki, sağ  ve sol qolu eyni məntiqlə ağac qruluşuna malikdir. Düyünləri müqayisə etməklə axtariş aparmaq olar.
