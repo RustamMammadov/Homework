@@ -1,9 +1,5 @@
-﻿using System.Diagnostics;
-using System.Threading;
-
-namespace Calculator_Lesson_2
+﻿namespace Calculator_Lesson_2
 {
-
     internal class Calculator
     {
         static void Main(string[] args)
@@ -12,14 +8,13 @@ namespace Calculator_Lesson_2
             {
                 Console.Write("Calculator\n\n");
                 var a = Console.ReadLine();
-                var arititmetic = Console.ReadLine();
+                var aritmetic = Console.ReadLine();
                 var b = Console.ReadLine();
                 Console.WriteLine(" = ");
-                int.TryParse(a, out int n1);
-                int.TryParse(b, out int n2);
-
-                    Console.Clear();
-                switch (arititmetic)
+                float.TryParse(a, out float n1);
+                float.TryParse(b, out float n2);
+                Console.Clear();
+                switch (aritmetic)
                 {
                     case "+":
                         Plus(n1, n2);
@@ -34,37 +29,34 @@ namespace Calculator_Lesson_2
                         Multiplicatione(n1, n2);
                         break;
                     defoult:
-                        //Console.Clear();
                         Console.WriteLine("Incorrect Entry");
-                        Thread.Sleep(3000);
+                        Console.ReadLine();
                         Console.Clear();
                         break;
                 }
-                Thread.Sleep(3000);
+                Console.ReadLine();
                 Console.Clear();
             }
         }
-
-        private static void Plus(int n1, int n2)
+        private static void Plus(float n1, float n2)
         {
             Console.WriteLine($"{n1} + {n2} = {n1 + n2}");
         }
-        private static void Minus(int n1, int n2)
+        private static void Minus(float n1, float n2)
         {
             Console.WriteLine($"{n1} - {n2} = {n1 - n2}");
         }
-        private static void Multiplicatione(int n1, int n2)
+        private static void Multiplicatione(float n1, float n2)
         {
             Console.WriteLine($"{n1} * {n2} = {n1 * n2}");
         }
-        private static void Divide(int n1, int n2)
+        private static void Divide(float n1, float n2)
         {
             if (n2 == 0)
             {
                 Console.Clear();
                 Console.WriteLine("Error...");
-                Thread.Sleep(3000);
-
+                Console.ReadLine();
             }
             else
                 Console.WriteLine($"{n1} / {n2} = {n1 / n2}");
