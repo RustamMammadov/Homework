@@ -1,0 +1,45 @@
+C:\Users\nvale\source\repos\Lesson10\Lesson10\bin\Debug\net6.0\Lesson10.exe
+C:\Users\nvale\source\repos\Lesson10\Lesson10\bin\Debug\net6.0\Lesson10.deps.json
+C:\Users\nvale\source\repos\Lesson10\Lesson10\bin\Debug\net6.0\Lesson10.runtimeconfig.json
+C:\Users\nvale\source\repos\Lesson10\Lesson10\bin\Debug\net6.0\Lesson10.dll
+C:\Users\nvale\source\repos\Lesson10\Lesson10\bin\Debug\net6.0\Lesson10.pdb
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\Lesson10.csproj.AssemblyReference.cache
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\Lesson10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\Lesson10.AssemblyInfoInputs.cache
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\Lesson10.AssemblyInfo.cs
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\Lesson10.csproj.CoreCompileInputs.cache
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\Lesson10.dll
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\refint\Lesson10.dll
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\Lesson10.pdb
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\Lesson10.genruntimeconfig.cache
+C:\Users\nvale\source\repos\Lesson10\Lesson10\obj\Debug\net6.0\ref\Lesson10.dll
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.exe
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.deps.json
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.runtimeconfig.json
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.dll
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.pdb
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.csproj.AssemblyReference.cache
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.AssemblyInfoInputs.cache
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.AssemblyInfo.cs
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.csproj.CoreCompileInputs.cache
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.dll
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\refint\Lesson10.dll
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.pdb
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.genruntimeconfig.cache
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\C#\Lesson 12 c#\Lesson10\obj\Debug\net6.0\ref\Lesson10.dll
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.exe
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.deps.json
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.runtimeconfig.json
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.dll
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\bin\Debug\net6.0\Lesson10.pdb
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.csproj.AssemblyReference.cache
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.AssemblyInfoInputs.cache
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.AssemblyInfo.cs
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.csproj.CoreCompileInputs.cache
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.dll
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\refint\Lesson10.dll
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.pdb
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\Lesson10.genruntimeconfig.cache
+C:\Users\nvale\Downloads\OneDrive\İş masası\Step\GIT\Lesson 12 c#\Lesson10\obj\Debug\net6.0\ref\Lesson10.dll

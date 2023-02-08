@@ -1,0 +1,15 @@
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\bin\Debug\net6.0\Lesson 3 Sual.exe
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\bin\Debug\net6.0\Lesson 3 Sual.deps.json
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\bin\Debug\net6.0\Lesson 3 Sual.runtimeconfig.json
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\bin\Debug\net6.0\Lesson 3 Sual.dll
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\bin\Debug\net6.0\Lesson 3 Sual.pdb
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\Lesson 3 Sual.csproj.AssemblyReference.cache
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\Lesson 3 Sual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\Lesson 3 Sual.AssemblyInfoInputs.cache
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\Lesson 3 Sual.AssemblyInfo.cs
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\Lesson 3 Sual.csproj.CoreCompileInputs.cache
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\Lesson 3 Sual.dll
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\refint\Lesson 3 Sual.dll
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\Lesson 3 Sual.pdb
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\Lesson 3 Sual.genruntimeconfig.cache
+C:\Users\nvale\source\repos\Lesson 3 Sual\Lesson 3 Sual\obj\Debug\net6.0\ref\Lesson 3 Sual.dll
